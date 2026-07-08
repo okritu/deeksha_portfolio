@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/Icons";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
@@ -89,17 +89,7 @@ export function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="p-2.5 rounded-xl bg-slate-900 border border-white/5 text-primary flex-shrink-0 mt-0.5">
-                      <Phone className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <p className="text-[10px] font-mono text-text-muted uppercase">Voice Communications</p>
-                      <a href="tel:+916393870394" className="text-xs sm:text-sm font-bold text-white hover:text-secondary transition-colors mt-0.5 block">
-                        +91-6393870394
-                      </a>
-                    </div>
-                  </div>
+
 
                   <div className="flex items-start gap-4">
                     <div className="p-2.5 rounded-xl bg-slate-900 border border-white/5 text-secondary flex-shrink-0 mt-0.5">

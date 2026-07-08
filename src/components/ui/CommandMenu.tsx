@@ -95,14 +95,7 @@ export function CommandMenu() {
       action: () => copyToClipboard("deeksha30pal@gmail.com", "Email Address"),
       category: "Contact",
     },
-    {
-      id: "copy-phone",
-      title: "Copy Phone Number",
-      subtitle: "+91-6393870394",
-      icon: <Clipboard className="w-4 h-4 text-secondary" />,
-      action: () => copyToClipboard("+916393870394", "Phone Number"),
-      category: "Contact",
-    },
+
     {
       id: "download-resume",
       title: "Download Analytical Resume",

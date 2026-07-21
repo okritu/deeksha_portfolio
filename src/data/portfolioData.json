@@ -1,0 +1,139 @@
+{
+  "profile": {
+    "name": "Deeksha Pal",
+    "role": "Junior Data Analyst / Analytics Engineer",
+    "email": "deeksha30pal@gmail.com",
+    "phone": "+91-6393870394",
+    "location": "Greater Noida, Uttar Pradesh, India",
+    "linkedin": "https://linkedin.com/in/deeksha-pal-48b333235",
+    "github": "https://github.com/okritu",
+    "availability": "Immediate (Full-Time or Co-op)",
+    "summary": "MCA student with hands-on experience in Python, SQL, MySQL and Power BI. Skilled in data cleaning, EDA, SQL reporting and dashboard development. Seeking an entry-level Data Analyst role."
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Data Analyst Intern",
+      "company": "Azeosoft Web Technologies Pvt. Ltd.",
+      "duration": "Apr 2026 - Jun 2026",
+      "bullets": [
+        "Cleaned and validated datasets using Python, SQL and Excel.",
+        "Performed EDA and developed SQL reports.",
+        "Built dashboards and visualizations for business insights.",
+        "Collaborated on analytics and reporting projects."
+      ]
+    }
+  ],
+  "skills": {
+    "core": [
+      { "label": "Python Core", "value": 90, "color": "indigo" },
+      { "label": "SQL Relational", "value": 95, "color": "cyan" },
+      { "label": "Power BI", "value": 88, "color": "cyan" }
+    ],
+    "supplementary": [
+      { "label": "Pandas & NumPy", "value": 92 },
+      { "label": "MySQL Queries / Joins", "value": 94 },
+      { "label": "Advanced Excel Modeling", "value": 85 },
+      { "label": "Matplotlib & Seaborn", "value": 80 },
+      { "label": "Git & GitHub Versioning", "value": 88 },
+      { "label": "Machine Learning (Basics)", "value": 75 }
+    ]
+  },
+  "projects": [
+    {
+      "id": "stock-market-intelligence",
+      "title": "Stock Market Intelligence Analysis",
+      "subtitle": "Database Architecture & Financial Analytics Platform",
+      "description": "Designed and implemented a database and reporting schema in MySQL to analyze historical stock transactions. Conducted statistical volatility modeling in Jupyter Notebooks and engineered a financial dashboard in Power BI to track stock trends.",
+      "achievements": [
+        "Collected and cleaned historical stock market data using Python and Pandas.",
+        "Performed exploratory data analysis (EDA) to identify price trends and market volatility.",
+        "Designed MySQL tables and wrote SQL queries for financial reporting and analysis.",
+        "Built an interactive Power BI dashboard to visualize stock performance and key metrics."
+      ],
+      "techStack": ["Python", "SQL", "MySQL", "Pandas", "NumPy", "Power BI"],
+      "githubUrl": "https://github.com/okritu",
+      "category": "Database",
+      "metrics": [
+        { "label": "Data Handled", "value": "Historical Time-Series" },
+        { "label": "SQL Queries", "value": "CTEs & Window Funcs" },
+        { "label": "Analytics Focus", "value": "Volatility Tracking" }
+      ]
+    },
+    {
+      "id": "linkedin-job-analytics",
+      "title": "LinkedIn Job Market Analytics",
+      "subtitle": "Ingestion Pipelines & Talent Supply Dashboarding",
+      "description": "Designed an analytical project to capture and study tech hiring trends. Structured job profiles to map remote-work allocations, language requirements, and hiring frequencies across geographical software hubs.",
+      "achievements": [
+        "Collected LinkedIn jobs using web scraping and APIs.",
+        "Performed cleaning, EDA and SQL reporting.",
+        "Built a Power BI dashboard for hiring trends.",
+        "Analyzed hiring trends across industries, locations, and work modes to identify recruitment patterns.",
+        "Developed interactive Power BI visualizations to compare remote, hybrid, and onsite job opportunities for business reporting."
+      ],
+      "techStack": ["Python", "SQL", "MySQL", "Pandas", "NumPy", "Power BI"],
+      "githubUrl": "https://github.com/okritu",
+      "category": "Analysis",
+      "metrics": [
+        { "label": "Data Preprocessing", "value": "JSON to Tabular" },
+        { "label": "Skills Mapped", "value": "30+ Classifications" },
+        { "label": "BI Target", "value": "Hiring Trends Dashboard" }
+      ]
+    },
+    {
+      "id": "zomato-analysis",
+      "title": "Zomato Restaurant Data Diagnostics & BI Dashboard",
+      "subtitle": "Exploratory Data Analysis & Pricing Strategy Insights",
+      "description": "Engineered an end-to-end data analytics workflow on Zomato's restaurant dataset to identify factors driving customer ratings and optimal restaurant locations. Deployed interactive dashboards in Power BI for operational business insights.",
+      "achievements": [
+        "Cleansed and structured raw data using Pandas and NumPy, resolving 15%+ missing geolocation records and inconsistent pricing syntax.",
+        "Conducted detailed Exploratory Data Analysis (EDA) in Matplotlib and Seaborn, discovering that restaurants offering online ordering carried a 20% higher average rating.",
+        "Developed a responsive multi-page Power BI dashboard featuring dynamic drill-downs by location, average cost-for-two, and cuisine categories.",
+        "Synthesized critical business expansion recommendations, identifying under-served geographical hubs and high-potential low-competition cuisines."
+      ],
+      "techStack": ["Python", "SQL", "MySQL", "Pandas", "NumPy", "Power BI", "Matplotlib", "Seaborn"],
+      "githubUrl": "https://github.com/okritu",
+      "category": "Visualization",
+      "metrics": [
+        { "label": "Data Cleaned", "value": "15% Nulls Resolved" },
+        { "label": "Insights Generated", "value": "4 Key Recommendations" },
+        { "label": "Dashboard Views", "value": "Interactive Drilldowns" }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "year": "2024 - 2026",
+      "title": "Master of Computer Applications (MCA)",
+      "school": "GL Bajaj College of Technology and Management",
+      "description": "Relational DBMS indexing, data modeling algorithms, and software engineering principles."
+    },
+    {
+      "id": "edu-2",
+      "year": "2021 - 2024",
+      "title": "Bachelor of Computer Applications (BCA)",
+      "school": "Mahatma Gandhi Kashi Vidyapith",
+      "description": "Graduated with honors in programming fundamentals, mathematical logic, and database management concepts."
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "title": "IBM Python for Data Science",
+      "issuer": "IBM",
+      "date": "2025",
+      "verificationUrl": "https://github.com/okritu",
+      "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn"]
+    },
+    {
+      "id": "cert-2",
+      "title": "SQL Certification",
+      "issuer": "Internshala",
+      "date": "2024",
+      "verificationUrl": "https://github.com/okritu",
+      "skills": ["MySQL", "CTE", "Joins", "Subqueries"]
+    }
+  ]
+}

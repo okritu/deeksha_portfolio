@@ -3,7 +3,6 @@ import { Header } from "@/components/common/Header";
 import { Hero } from "@/features/hero";
 import { About } from "@/features/about";
 import { Skills } from "@/features/skills";
-import { Sandbox } from "@/features/sandbox";
 import { Projects } from "@/features/projects";
 
 import { Education } from "@/features/education";
@@ -32,9 +31,6 @@ export default function Home() {
 
         {/* 3. Circular Tech & Libraries Taxonomy */}
         <Skills />
-
-        {/* 4. Interactive SQL IDE / BI Dashboard Sandbox */}
-        <Sandbox />
 
         {/* 5. Detailed Case Studies & Filters */}
         <Projects />

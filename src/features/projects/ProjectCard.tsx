@@ -7,7 +7,17 @@ import { Github } from "@/components/ui/Icons";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 import { Button } from "@/components/ui/Button";
-import { Project } from "./projectsData";
+export interface Project {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  achievements: string[];
+  techStack: string[];
+  githubUrl: string;
+  category: "Visualization" | "Database" | "Analysis";
+  metrics: { label: string; value: string }[];
+}
 
 interface ProjectCardProps {
   project: Project;

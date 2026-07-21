@@ -9,62 +9,35 @@ import { Heading } from "@/components/ui/Heading";
 import { Card } from "@/components/ui/Card";
 import { SkillBadge } from "@/components/ui/SkillBadge";
 
-const timelineEvents = [
-  {
-    year: "2026 - Future",
-    title: "Analytics Engineer / Junior Data Analyst",
-    type: "Goal",
-    subtitle: "Accelerate Business Growth",
-    description: "Positioned to join a modern data stack team to automate pipelines, normalize warehousing structures, and optimize query latency."
-  },
-  {
-    year: "2025",
-    title: "IBM Python for Data Science Certified",
-    type: "Credential",
-    subtitle: "Professional Certificate",
-    description: "Completed rigorous coursework in Python scripting, API data collections, and Pandas/NumPy preprocessing frameworks."
-  },
-  {
-    year: "2024 - 2026",
-    title: "Master of Computer Applications (MCA)",
-    type: "Education",
-    subtitle: "GL Bajaj Institute of Tech & Mgmt",
-    description: "Acquiring engineering fundamentals: Relational DBMS indexing, data modeling algorithms, and software development patterns."
-  },
-  {
-    year: "2021 - 2024",
-    title: "Bachelor of Computer Applications (BCA)",
-    type: "Education",
-    subtitle: "Mahatma Gandhi Kashi Vidyapith",
-    description: "Graduated with honors in programming fundamentals, mathematical logic, and relational database systems concepts."
-  }
-];
-
-const certificates = [
-  {
-    title: "Python for Data Science",
-    issuer: "IBM (Coursera Verified)",
-    date: "Issued 2025",
-    verificationUrl: "https://github.com/okritu",
-    skills: ["Pandas & NumPy", "Web scraping", "API ingestion", "Wrangling"]
-  },
-  {
-    title: "SQL Query Engineering",
-    issuer: "In-Course Academic Honors",
-    date: "Issued 2024",
-    verificationUrl: "https://github.com/okritu",
-    skills: ["MySQL Server", "Aggregations", "CTE & Joins", "Subqueries"]
-  },
-  {
-    title: "Data Visualization & Dashboarding",
-    issuer: "Guided Practical Studies",
-    date: "Issued 2024",
-    verificationUrl: "https://github.com/okritu",
-    skills: ["Power BI", "DAX calculations", "Data modeling", "Chart design"]
-  }
-];
+import portfolioData from "@/data/portfolioData.json";
 
 export function Education() {
+  const { education, experience, certifications } = portfolioData;
+
+  const timelineEvents = [
+    ...experience.map((exp) => ({
+      year: exp.duration,
+      title: exp.role,
+      type: "Experience",
+      subtitle: exp.company,
+      description: exp.bullets.join(" • ")
+    })),
+    ...education.map((edu) => ({
+      year: edu.year,
+      title: edu.title,
+      type: "Education",
+      subtitle: edu.school,
+      description: edu.description
+    }))
+  ];
+
+  const certificates = certifications.map((cert) => ({
+    title: cert.title,
+    issuer: cert.issuer,
+    date: cert.date,
+    verificationUrl: cert.verificationUrl,
+    skills: cert.skills
+  }));
   return (
     <Section id="education" hasGlow glowColor="indigo">
       <Container>
@@ -98,10 +71,8 @@ export function Education() {
             <div className="relative border-l border-white/5 ml-3 pl-6 space-y-8 flex-grow">
               {timelineEvents.map((event, idx) => {
                 const badgeColor = 
-                  event.type === "Goal" 
+                  event.type === "Experience" 
                     ? "bg-secondary/15 text-secondary border-secondary/20"
-                    : event.type === "Credential"
-                    ? "bg-accent/15 text-accent border-accent/20"
                     : "bg-primary/15 text-primary border-primary/20";
                 
                 return (

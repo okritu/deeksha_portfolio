@@ -6,16 +6,17 @@ import { Search, FolderGit } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Heading } from "@/components/ui/Heading";
-import { ProjectCard } from "./ProjectCard";
-import { projectsData } from "./projectsData";
+import { ProjectCard, Project } from "./ProjectCard";
+import portfolioData from "@/data/portfolioData.json";
 
 type CategoryFilter = "All" | "Visualization" | "Database" | "Analysis";
 
 export function Projects() {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const projects = portfolioData.projects as Project[];
 
-  const filteredProjects = projectsData.filter((project) => {
+  const filteredProjects = projects.filter((project) => {
     const matchesCategory =
       activeCategory === "All" || project.category === activeCategory;
     const matchesSearch =

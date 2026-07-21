@@ -7,6 +7,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Heading } from "@/components/ui/Heading";
 import { Card } from "@/components/ui/Card";
+import portfolioData from "@/data/portfolioData.json";
 
 // Circular gauge progress component
 function CircularProgress({ value, label, color = "indigo" }: { value: number; label: string; color?: "indigo" | "cyan" }) {
@@ -81,22 +82,9 @@ function LinearProgress({ label, value }: { label: string; value: number }) {
   );
 }
 
-const coreSkills = [
-  { label: "Python Core", value: 90, color: "indigo" as const },
-  { label: "SQL Relational", value: 95, color: "cyan" as const },
-  { label: "Power BI", value: 88, color: "cyan" as const },
-];
-
-const supplementarySkills = [
-  { label: "Pandas & NumPy", value: 92 },
-  { label: "MySQL Queries / Joins", value: 94 },
-  { label: "Advanced Excel Modeling", value: 85 },
-  { label: "Matplotlib & Seaborn", value: 80 },
-  { label: "Git & GitHub Versioning", value: 88 },
-  { label: "Machine Learning (Basics)", value: 75 },
-];
-
 export function Skills() {
+  const { skills } = portfolioData;
+
   return (
     <Section id="skills" hasGlow glowColor="cyan">
       <Container>
@@ -133,12 +121,12 @@ export function Skills() {
               </div>
 
               <div className="grid grid-cols-3 gap-4 py-8">
-                {coreSkills.map((skill, idx) => (
+                {skills.core.map((skill, idx) => (
                   <CircularProgress
                     key={idx}
                     value={skill.value}
                     label={skill.label}
-                    color={skill.color}
+                    color={skill.color as "indigo" | "cyan"}
                   />
                 ))}
               </div>
@@ -170,7 +158,7 @@ export function Skills() {
               </div>
 
               <div className="space-y-5 py-6">
-                {supplementarySkills.map((skill, idx) => (
+                {skills.supplementary.map((skill, idx) => (
                   <LinearProgress
                     key={idx}
                     label={skill.label}

@@ -123,12 +123,12 @@ export function Hero() {
           <Button
             variant="outline"
             onClick={() => {
-              window.open("mailto:deeksha30pal@gmail.com?subject=Requesting Resume - Data Analyst", "_blank");
+              window.open("/resume", "_blank");
             }}
             className="w-full sm:w-auto px-7 py-3 text-sm font-semibold gap-2 cursor-pointer border-white/5 bg-slate-950/40 hover:bg-slate-900"
           >
             <FileDown className="w-4 h-4 text-secondary" />
-            Request Resume
+            View Resume
           </Button>
         </motion.div>
 

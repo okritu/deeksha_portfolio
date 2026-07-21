@@ -98,11 +98,11 @@ export function CommandMenu() {
 
     {
       id: "download-resume",
-      title: "Download Analytical Resume",
-      subtitle: "Generate professional portfolio PDF for applicant tracking systems",
+      title: "View & Print Resume",
+      subtitle: "Open professional print-friendly layout to save as PDF",
       icon: <FileDown className="w-4 h-4 text-accent" />,
       action: () => {
-        window.open("mailto:deeksha30pal@gmail.com?subject=Requesting Resume - Data Analyst", "_blank");
+        window.open("/resume", "_blank");
         setIsOpen(false);
       },
       category: "Utilities",

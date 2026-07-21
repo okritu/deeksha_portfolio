@@ -7,14 +7,7 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Heading } from "@/components/ui/Heading";
 import { Card } from "@/components/ui/Card";
-
-const profileDetails = [
-  { label: "Role Target", value: "Junior Data Analyst / Analytics Engineer", icon: <Compass className="text-primary w-4 h-4" /> },
-  { label: "Current Education", value: "MCA Pursuing (GL Bajaj College)", icon: <GraduationCap className="text-secondary w-4 h-4" /> },
-  { label: "Location Base", value: "Greater Noida, UP, India", icon: <MapPin className="text-accent w-4 h-4" /> },
-  { label: "Availability Status", value: "Immediate (Full-Time or Co-op)", icon: <Calendar className="text-primary w-4 h-4" /> },
-  { label: "Direct Communications", value: "deeksha30pal@gmail.com", icon: <Mail className="text-secondary w-4 h-4" /> },
-];
+import portfolioData from "@/data/portfolioData.json";
 
 const strengths = [
   { title: "Rigorous Preprocessing", desc: "Using Pandas & NumPy to cleanse null arrays, validate ranges, and filter out outlier values to maintain mathematical model integrity." },
@@ -24,6 +17,16 @@ const strengths = [
 ];
 
 export function About() {
+  const { profile } = portfolioData;
+
+  const profileDetails = [
+    { label: "Role Target", value: profile.role, icon: <Compass className="text-primary w-4 h-4" /> },
+    { label: "Current Education", value: "MCA Pursuing (GL Bajaj College)", icon: <GraduationCap className="text-secondary w-4 h-4" /> },
+    { label: "Location Base", value: profile.location, icon: <MapPin className="text-accent w-4 h-4" /> },
+    { label: "Availability Status", value: profile.availability, icon: <Calendar className="text-primary w-4 h-4" /> },
+    { label: "Direct Communications", value: profile.email, icon: <Mail className="text-secondary w-4 h-4" /> },
+  ];
+
   return (
     <Section id="about" hasGlow glowColor="indigo">
       <Container>
@@ -48,7 +51,7 @@ export function About() {
                 Engineering Analytical Pipelines for Evidence-Backed Actions
               </h3>
               <p className="text-text-muted leading-relaxed text-sm md:text-base">
-                I am a Master of Computer Applications student bridging software development rigor with data analytics. I am committed to standardizing messy datasets, writing performant SQL queries, and converting raw database transactions into interactive business dashboards.
+                {profile.summary}
               </p>
             </div>
 
@@ -105,7 +108,7 @@ export function About() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-white tracking-wide">Candidate Profile</h4>
-                    <p className="text-[10px] font-mono text-text-muted uppercase">Deeksha Pal</p>
+                    <p className="text-[10px] font-mono text-text-muted uppercase">{profile.name}</p>
                   </div>
                 </div>
 

@@ -6,6 +6,7 @@ import { Menu, X, Mail } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/Icons";
 import { useScroll } from "@/hooks/useScroll";
 import { Container } from "@/components/ui/Container";
+import { usePathname, useRouter } from "next/navigation";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -18,9 +19,26 @@ const navLinks = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const isScrolled = useScroll(20);
+  const pathname = usePathname();
+  const router = useRouter();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    closeMenu();
+
+    if (pathname !== "/") {
+      router.push("/" + href);
+    } else {
+      const targetId = href.replace("#", "");
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <header
@@ -34,7 +52,16 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#"
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              closeMenu();
+              if (pathname !== "/") {
+                router.push("/");
+              } else {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
             className="flex items-center gap-2 group focus:outline-none"
           >
             <span className="font-mono text-lg font-bold text-white tracking-wider flex items-center">
@@ -51,6 +78,7 @@ export function Header() {
                 <li key={link.name}>
                   <a
                     href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="text-sm font-medium text-text-muted hover:text-white transition-colors duration-200 focus:outline-none focus:text-primary"
                   >
                     {link.name}
@@ -117,7 +145,7 @@ export function Header() {
                   <a
                     key={link.name}
                     href={link.href}
-                    onClick={closeMenu}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="text-base font-semibold text-text-muted hover:text-white px-2 py-2.5 rounded-lg hover:bg-slate-900 transition-all focus:outline-none focus:bg-slate-900 focus:text-primary"
                   >
                     {link.name}

@@ -20,7 +20,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "relative py-20 md:py-28 overflow-hidden",
+        "relative py-20 md:py-28 overflow-hidden scroll-mt-20 md:scroll-mt-24",
         className
       )}
       {...props}

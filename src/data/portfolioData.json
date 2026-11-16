@@ -33,13 +33,54 @@
     "supplementary": [
       { "label": "Pandas & NumPy", "value": 92 },
       { "label": "MySQL Queries / Joins", "value": 94 },
+      { "label": "FastAPI & REST APIs", "value": 86 },
+      { "label": "Machine Learning & Scikit-Learn", "value": 85 },
       { "label": "Advanced Excel Modeling", "value": 85 },
       { "label": "Matplotlib & Seaborn", "value": 80 },
-      { "label": "Git & GitHub Versioning", "value": 88 },
-      { "label": "Machine Learning (Basics)", "value": 75 }
+      { "label": "Git & GitHub Versioning", "value": 88 }
     ]
   },
   "projects": [
+    {
+      "id": "bizpulse-intelligence",
+      "title": "BizPulse — Autonomous Decision Intelligence & Copilot",
+      "subtitle": "Predictive Revenue Forecasting & Executive Business Copilot",
+      "description": "Engineered an end-to-end enterprise decision intelligence platform featuring regression revenue forecasting, RFM churn probability modeling, anomaly detection alerts, and a database-grounded LLM business copilot operating under strict anti-hallucination guardrails.",
+      "achievements": [
+        "Built statistical OLS revenue forecasting models computing R², MAPE, and 6-month projected run rates with 95% confidence intervals.",
+        "Implemented RFM (Recency, Frequency, Monetary) customer segmentation to identify churn risk and high-value customer clusters.",
+        "Engineered an asynchronous FastAPI backend paired with a React/Vite operational dashboard with real-time analytics visualizations.",
+        "Architected a SQL-grounded copilot using LLaMA-3 via Groq for natural language executive querying without hallucination risks."
+      ],
+      "techStack": ["Python", "FastAPI", "React", "Scikit-Learn", "Groq / LLaMA-3", "SQLite", "Tailwind CSS"],
+      "githubUrl": "https://github.com/okritu",
+      "category": "Analysis",
+      "metrics": [
+        { "label": "ML Accuracy", "value": "R² > 0.95 Forecast" },
+        { "label": "Customer Clusters", "value": "4 RFM Tiers" },
+        { "label": "Copilot Architecture", "value": "SQL-Grounded LLM" }
+      ]
+    },
+    {
+      "id": "payguard-ai",
+      "title": "PayGuard AI — Financial Fraud Detection Platform",
+      "subtitle": "Sub-50ms Transaction Risk Classification & Audit System",
+      "description": "Production-grade enterprise financial fraud detection system combining high-throughput machine learning risk classification, multi-tenant JWT security, and interactive operational compliance dashboards.",
+      "achievements": [
+        "Trained and calibrated Random Forest classifiers with 17 domain-engineered features on 1M+ transactions (PaySim benchmark).",
+        "Achieved 99.99% accuracy, 99.55% precision, and 97.81% recall on a 209,700-sample stratified test holdout.",
+        "Developed sub-50ms inference API endpoints in FastAPI with automated calibrated risk scoring (LOW, MEDIUM, HIGH).",
+        "Designed an interactive React 19 dashboard with live KPI metrics, dynamic risk filtering, and audit-ready CSV exports."
+      ],
+      "techStack": ["Python", "Scikit-Learn", "FastAPI", "React", "Vite", "MySQL", "Recharts"],
+      "githubUrl": "https://github.com/okritu",
+      "category": "Database",
+      "metrics": [
+        { "label": "Model Precision", "value": "99.55% Precision" },
+        { "label": "Inference Latency", "value": "< 50ms Real-Time" },
+        { "label": "Test Dataset", "value": "209K+ Transactions" }
+      ]
+    },
     {
       "id": "stock-market-intelligence",
       "title": "Stock Market Intelligence Analysis",

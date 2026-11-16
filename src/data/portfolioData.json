@@ -10,20 +10,7 @@
     "availability": "Immediate (Full-Time or Co-op)",
     "summary": "MCA student with hands-on experience in Python, SQL, MySQL and Power BI. Skilled in data cleaning, EDA, SQL reporting and dashboard development. Seeking an entry-level Data Analyst role."
   },
-  "experience": [
-    {
-      "id": "exp-1",
-      "role": "Data Analyst Intern",
-      "company": "Azeosoft Web Technologies Pvt. Ltd.",
-      "duration": "Apr 2026 - Jun 2026",
-      "bullets": [
-        "Cleaned and validated datasets using Python, SQL and Excel.",
-        "Performed EDA and developed SQL reports.",
-        "Built dashboards and visualizations for business insights.",
-        "Collaborated on analytics and reporting projects."
-      ]
-    }
-  ],
+  "experience": [],
   "skills": {
     "core": [
       { "label": "Python Core", "value": 90, "color": "indigo" },

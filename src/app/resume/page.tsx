@@ -84,31 +84,33 @@ export default function ResumePage() {
           </p>
         </div>
 
-        {/* Experience */}
-        <div className="py-6 border-b border-white/5 print:border-black/5 text-left">
-          <h2 className="text-sm font-bold tracking-widest font-mono text-secondary uppercase mb-4 print:text-black print:border-b print:border-black/15 print:pb-1">
-            Professional Experience
-          </h2>
-          <div className="space-y-4">
-            {experience.map((job) => (
-              <div key={job.id} className="space-y-1.5">
-                <div className="flex justify-between items-baseline flex-wrap gap-2">
-                  <h3 className="text-sm md:text-base font-extrabold text-white print:text-black">
-                    {job.role} <span className="text-text-muted font-normal print:text-black/60">at {job.company}</span>
-                  </h3>
-                  <span className="text-xs font-mono text-secondary print:text-black/75">
-                    {job.duration}
-                  </span>
+        {/* Experience (if any) */}
+        {experience && experience.length > 0 && (
+          <div className="py-6 border-b border-white/5 print:border-black/5 text-left">
+            <h2 className="text-sm font-bold tracking-widest font-mono text-secondary uppercase mb-4 print:text-black print:border-b print:border-black/15 print:pb-1">
+              Professional Experience
+            </h2>
+            <div className="space-y-4">
+              {(experience as any[]).map((job) => (
+                <div key={job.id} className="space-y-1.5">
+                  <div className="flex justify-between items-baseline flex-wrap gap-2">
+                    <h3 className="text-sm md:text-base font-extrabold text-white print:text-black">
+                      {job.role} <span className="text-text-muted font-normal print:text-black/60">at {job.company}</span>
+                    </h3>
+                    <span className="text-xs font-mono text-secondary print:text-black/75">
+                      {job.duration}
+                    </span>
+                  </div>
+                  <ul className="list-disc list-outside pl-4 space-y-1 text-xs text-text-muted leading-relaxed print:text-black/90">
+                    {job.bullets.map((bullet: string, idx: number) => (
+                      <li key={idx}>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="list-disc list-outside pl-4 space-y-1 text-xs text-text-muted leading-relaxed print:text-black/90">
-                  {job.bullets.map((bullet, idx) => (
-                    <li key={idx}>{bullet}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Technical Skills */}
         <div className="py-6 border-b border-white/5 print:border-black/5 text-left">

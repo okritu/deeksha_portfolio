@@ -15,7 +15,7 @@ export function Education() {
   const { education, experience, certifications } = portfolioData;
 
   const timelineEvents = [
-    ...experience.map((exp) => ({
+    ...((experience as any[]) || []).map((exp) => ({
       year: exp.duration,
       title: exp.role,
       type: "Experience",
